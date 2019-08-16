@@ -1,0 +1,17 @@
+<% include partials/header %>
+
+<main>
+  <article>
+    <h2>Add new post</h2>
+    <form action="/" method="POST">
+      <input type="text" name="post[title]" />
+      <textarea name="post[body]" cols="30" rows="10"></textarea>
+      <input type="text" name="post[category]" />
+      <input type="submit" value="Add" />
+    </form>
+  </article>
+
+  <aside></aside>
+</main>
+
+<% include partials/footer %>

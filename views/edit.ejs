@@ -1,0 +1,17 @@
+<% include partials/header %>
+
+<main>
+  <article>
+    <h2>Edit post</h2>
+    <form action="/<%=post.id%>?_method=PUT" method="POST">
+      <input type="text" name="post[title]" value="<%=post.title%>" />
+      <textarea name="post[body]" cols="30" rows="10"><%=post.body%></textarea>
+      <input type="text" name="post[category]" value="<%=post.category%>" />
+      <input type="submit" value="Edit" />
+    </form>
+  </article>
+
+  <aside></aside>
+</main>
+
+<% include partials/footer %>

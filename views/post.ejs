@@ -1,0 +1,23 @@
+<% include partials/header %>
+
+<main>
+  <article>
+    <h2><%=post.title%></h2>
+    <h6><%=post.category%></h6>
+    <p><%=post.body%></p>
+    <section>
+      <a href="/<%=post.id%>/edit">Edit</a>
+      <form
+        style="display: inline-block"
+        method="POST"
+        action="/<%=post.id%>?_method=DELETE"
+      >
+        <input type="submit" value="Delete" />
+      </form>
+    </section>
+  </article>
+
+  <aside></aside>
+</main>
+
+<% include partials/footer %>
